@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos em CSS</title>
+    <style>
+        /*
+        # -> id
+        . -> class
+        : -> pseudo class
+        :: -> pseudo elements
+        > -> children
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color:green;
+            text-decoration: none;
+        }
+        a:visited {
+            color: darkgreen;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        a:active {
+            color: yellow;
+        }
+
+        a::after {
+            content: '➲';
+        }
+        .github::before {
+            content: '➀ ';
+        }
+        .youtube::before{
+            content: '➁ ';
+        }
+        .video::before{
+            content: '➂ ';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li ><a href="https://gustavoguanabara.github.io" target="_blank" class="github">Repositório github</a></li>
+        <li ><a href="https://youtube.com/cursoemvideo" target="_blank" class="youtube">Canal do Youtube</a></li>
+        <li ><a href="https://cursoemvideo.com" target="_blank" class="video">Site do curso em vídeo</a></li>
+    </ul>
+</body>
+</html>
