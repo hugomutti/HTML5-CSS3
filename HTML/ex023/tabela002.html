@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grandes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            table{
+                border-collapse: collapse;
+                width: 500px;
+                position: relative;
+            
+            }
+
+                caption{
+                    background-color: lightgray;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+
+                thead{
+                    position: sticky; /* aqui o o titulo segue*/
+                    top: 0.6px;
+                }
+
+                thead, tfoot{
+                    background-color: darkgray;
+
+                }
+
+
+                th{
+                    border: 2px solid black;
+                    text-align: center;
+                    height: 15px;
+                    padding: 5px;
+                 }
+                 td{
+                    border: 2px solid black;
+                    text-align: center;
+                    padding: 5px;
+                 }
+                 td.num{
+                    text-align: right;
+                 }
+                 td.estado{
+                    text-align: left;
+                 }
+                 tbody > tr:nth-child(2n){ /* nth-child(2n) faz o efeito zebrado. (2n) vai gerar isso padronizado */
+                    background-color: lightgray;/* mas voce pode usar par e impar, que no caso seriam (even) e (odd)*/
+                 } /* O (2n) é como se fosse o par(even) e o (2n-1) é como se fosse ímpar (odd)*/
+                 /* qualquer duvida voltar a aula núemro 31 - Efeito zebrado na tabela com HTML e CSS*/
+        
+    </style>
+</head>
+<body>
+    <!--
+    Anatomia de tabelas grandes
+        table
+        caption (legenda ou título da tabela)
+            thead
+            (tr, td, th)
+                tbody
+                (tr, td, th)
+                    tfooter
+                    (tr, td, th)
+
+    OBS: O scope="col" é usado quando os dados depois do th são organizados em coluna. Já o scope="row" é usado quandos os dados decorrentes de um th são organizados em linha. Abaixo do th Estado, estão os estados em coluna, igualmente acontece com o th População. Já no th Total de habitantes do footer está com sua organização em linha, pois o número de habitantes se encontra ao lado.
+    -->
+
+    <table>
+        <caption>População por estados do Brasil</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 40px;">População</th> <!--Pode criar um id também-->
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="estado">São Paulo</td>
+                <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td class="num">20.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td class="num">17.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td class="num">14.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td class="num">5.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">São Paulo</td>
+                <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td class="num">20.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td class="num">17.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td class="num">14.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td class="num">5.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">São Paulo</td>
+                <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td class="num">20.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td class="num">17.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td class="num">14.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td class="num">5.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">São Paulo</td>
+                <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td class="num">20.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td class="num">17.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td class="num">14.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td class="num">5.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">São Paulo</td>
+                <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Minas Gerais</td>
+                <td class="num">20.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio de Janeiro</td>
+                <td class="num">17.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Bahia</td>
+                <td class="num">14.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Paraná</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Rio Grande do Sul</td>
+                <td class="num">7.000.000</td>
+            </tr>
+            <tr>
+                <td class="estado">Santa Catarina</td>
+                <td class="num">5.000.000</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row" style="text-align: left;">Total de habitantes</th>
+                <td class="num"> <strong>115.000.000</strong> </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
